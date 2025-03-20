@@ -1,0 +1,143 @@
+.input {
+
+    display: flex;
+    width:90%;
+    position: relative;
+    align-items: center;
+}
+
+
+.input__box {
+
+    width: 100%;
+    border-radius: 30px;
+    padding: 20px 30px;
+    font-size: 25px;
+    border: none;
+    transition: 0.2s;
+    box-shadow: inset 0 0 5px black;
+
+}
+
+.input__box:focus {
+    box-shadow: 0 0 10px 1000px rgba(83, 20, 99, 0.5); 
+    /* background-color: #333; */
+    outline: none; /* Removes the default outline */
+}
+
+
+.input__submit {
+
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    margin: 12px;
+    border-radius: 50px;
+    right: 0px;
+    border: none;
+    font-size: 15px;
+    background-color: #35053b;
+    color: white;
+    transition: 0.2s;
+    box-shadow: 0 0 10px black;
+
+
+
+}
+
+.input__submit:hover {
+
+    background-color: #8f0da0;
+}
+.input__submit:active {
+    transform: scale(0.5);
+    box-shadow: 0 0 5px black;
+
+}
+.todos__single {
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: space-between; /* Spaces out text and icons */
+    width: 90%; /* Makes the card responsive */
+    max-width: 600px; /* Limits the card width for larger screens */
+    border-radius: 15px; /* Smooth rounded corners */
+    padding: 20px;
+    margin: 20px auto; /* Centers the card horizontally and adds spacing */
+    background-color: #fff; /* Clean white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.todos__single:hover {
+    transform: translateY(-5px); /* Lifts the card slightly on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhances shadow on hover */
+    background-color:#cac3c3;
+}
+
+.todos__single--text {
+    flex: 1;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Darker text color for readability */
+}
+
+.icon {
+    margin-left: 10px;
+    font-size: 22px; /* Adjusted icon size for balance */
+    cursor: pointer;
+    color: #6c63ff; /* Modern purple tone for the icons */
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.icon:hover {
+    color: #35053b; /* Darker purple on hover */
+    transform: scale(1.2); /* Slightly enlarges the icon on hover */
+}
+
+.div {
+    display: flex;
+    gap: 15px; /* Adds consistent spacing between icons */
+}
+
+/* Add responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .todos__single {
+        width: 95%; /* Adjusts width for smaller screens */
+        padding: 15px;
+        font-size: 16px; /* Reduces font size slightly */
+    }
+
+    .icon {
+        font-size: 20px; /* Scales down icons for smaller screens */
+        gap: 10px;
+    }
+}
+
+
+.todos___single--test {
+    background-color: #e3d5f1; /* Light purple to match the background */
+    color: #4a148c; /* Darker purple for text */
+    border: 2px solid #b388ff; /* Soft border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 15px; /* Comfortable padding */
+    font-size: 16px; /* Readable font size */
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1), 
+                0 0 10px rgba(179, 136, 255, 0.5); /* Subtle glowing effect */
+    transition: all 0.3s ease; /* Smooth transitions */
+}
+
+
+
+.todos___single--test:focus{
+    outline: none; /* Remove default focus outline */
+    border-color: #7c4dff; /* Highlighted border on focus */
+    box-shadow: inset 0 1px 6px rgba(0, 0, 0, 0.2), 
+                0 0 15px rgba(124, 77, 255, 0.7); /* Brighter glow on focus */
+
+
+}
+
+
+
+.todos___single--test::placeholder {
+  color: #9e9e9e; }
